@@ -106,7 +106,7 @@ def remove_duplicate_words(x,y):
 
 
 # Opens a text file of list of words to learn from found on GitHub
-with open('nounlist.txt', 'r') as file:
+with open('../Other/nounlist.txt', 'r') as file:
     lines = file.readlines()
 
 def list_to_words(list):
@@ -168,7 +168,7 @@ def send_email():
     except Exception as e:
         print(f'Failed to send email: {e}')
 
-schedule.every().day.at('14:20').do(send_email)
+schedule.every().day.at('12:39').do(send_email)
 
 while True:
     schedule.run_pending()
